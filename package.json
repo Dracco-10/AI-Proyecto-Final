@@ -1,0 +1,30 @@
+{
+  "name": "ai-proyecto-2",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AGIChat CineBot: sistema multiagente que recomienda películas y las compara con libros",
+  "workspaces": [
+    "server",
+    "widget"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w server",
+    "dev:widget": "npm run dev -w widget",
+    "lint": "eslint .",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w widget",
+    "test": "npm run test -w server && npm run test -w widget",
+    "test:coverage": "npm run test:coverage -w server && npm run test:coverage -w widget",
+    "build": "npm run build -w server && npm run build -w widget",
+    "evals": "npm run evals -w server",
+    "evals:offline": "npm run evals:offline -w server"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2"
+  }
+}
